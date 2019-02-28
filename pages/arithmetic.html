@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		{{ template "common_header" .}}
+	</head>
+	<body>
+		{{ template "header" .}}
+
+		<div class="container nav_top_margin">
+			<div class="input-group mb-3 no-print" >
+				<div class="input-group-prepend mr-5">
+					<span class="input-group-text">范围: </span>
+					<input id="question.range" type="text" class="form-control" placeholder="多少以内加减法">
+				</div>
+
+				<div class="input-group-prepend mr-auto">
+					<span class="input-group-text">题数: </span>
+					<input id="question.count" type="text" class="form-control" placeholder="请输入题目数量">
+				</div>
+
+				<div style="display: inline-block; text-align: right;">
+					<button id="btnRefresh" type="button" class="btn btn-secondary" onclick="OnGetArithmetics();">出题</button>
+					<button id="btnPrint" type="button" class="btn btn-secondary" onclick="OnPrint('#'+'questions.grid')">打印</button>
+				</div>
+			</div>
+			<br>
+			<br>
+			<div id="questions.grid" class="container nav_top_margin">
+				<div id="quetions.title" class="container">	
+				</div>
+				<br>
+				<br>
+				<div class="row">
+					<div style="width: 35%;">
+					</div>
+					<div id="arithmetic.quetions_left" class="print_style" style="width: 20%;">	
+					</div>
+					<div id="arithmetic.quetions_right" class="print_style" style="width: 20%;">	
+					</div>
+					<div style="width: 15%;">
+					</div>
+  				</div>
+			</div>
+		</div>
+	</body>
+</html>
